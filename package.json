@@ -28,7 +28,7 @@
   "scripts": {
     "start": "webpack serve --mode=development",
     "build:website": "webpack --mode=production",
-    "build": "rollup --config --no-stdin",
+    "build": "rollup --config --no-stdin && tsc -p tsconfig.lib.json ",
     "build:types": "tsc -p tsconfig.lib.json && api-extractor run --local --verbose",
     "test": "jest",
     "test:watch": "jest --watch",
