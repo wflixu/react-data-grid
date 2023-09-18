@@ -1,6 +1,7 @@
+import type { LinariaClassName } from '@linaria/core';
 import { css } from '@linaria/core';
 
-export const cell = css`
+export const cell: LinariaClassName = css`
   /*
   Cannot use these because of a Chromium bug:
   https://bugs.chromium.org/p/chromium/issues/detail?id=1326946
@@ -29,11 +30,11 @@ export const cell = css`
   }
 `;
 
-export const cellClassname = `rdg-cell ${cell}`;
+export const cellClassname = `rdg-cell ${`${cell}`}`;
 
 // max-content does not calculate width when contain is set to style or size
 export const cellAutoResizeClassname = css`
-  .${cell} {
+  .${`${cell}`} {
     contain: content;
   }
 `;

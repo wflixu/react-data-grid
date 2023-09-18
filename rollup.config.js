@@ -2,7 +2,7 @@ import { isAbsolute } from 'path';
 import linaria from '@linaria/rollup';
 import postcss from 'rollup-plugin-postcss';
 import postcssNested from 'postcss-nested';
-import { babel } from '@rollup/plugin-babel';
+import babel from '@rollup/plugin-babel';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import pkg from './package.json';
 

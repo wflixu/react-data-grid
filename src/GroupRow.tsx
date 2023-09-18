@@ -32,12 +32,13 @@ const groupRow = css`
     background-color: var(--rdg-header-background-color);
   }
 
-  > .${cell}:not(:last-child):not(.${cellFrozenLast}) {
+  > .${String(cell)}:not(:last-child):not(.${`${cellFrozenLast}`}) {
     border-inline-end: none;
   }
 `;
 
-const groupRowClassname = `rdg-group-row ${groupRow}`;
+// eslint-disable-next-line sonarjs/no-nested-template-literals
+const groupRowClassname = `rdg-group-row ${`${groupRow}`}`;
 
 function GroupedRow<R, SR>({
   id,

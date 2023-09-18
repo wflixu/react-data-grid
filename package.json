@@ -1,15 +1,17 @@
 {
-  "name": "@pgmate/react-data-grid",
+  "name": "today-ui-data-grid",
   "version": "1.0.0",
   "license": "MIT",
   "description": "Feature-rich and customizable data grid React component",
   "keywords": [
     "react",
-    "data grid"
+    "data grid",
+    "pg",
+    "postgresql",
+    "pgadmin4"
   ],
   "repository": "github:wflixu/react-data-grid",
   "bugs": "https://github.com/wflixu/react-data-grid/issues",
-  "type": "module",
   "exports": {
     ".": {
       "module": "./lib/bundle.js",
@@ -17,7 +19,6 @@
       "default": "./lib/bundle.js"
     }
   },
-  "browser": "./lib/bundle.js",
   "main": "./lib/bundle.cjs",
   "module": "./lib/bundle.js",
   "types": "./lib/index.d.ts",
@@ -28,8 +29,8 @@
   "scripts": {
     "start": "webpack serve --mode=development",
     "build:website": "webpack --mode=production",
-    "build": "rollup --config --no-stdin && tsc -p tsconfig.lib.json ",
-    "build:types": "tsc -p tsconfig.lib.json && api-extractor run --local --verbose",
+    "build": "rollup --config --no-stdin && tsc -p tsconfig.lib.json",
+    "build:types": " api-extractor run --local --verbose",
     "test": "jest",
     "test:watch": "jest --watch",
     "eslint": "eslint --ext js,ts,tsx --max-warnings 0 --cache --color src test website",
@@ -51,9 +52,10 @@
     "@babel/preset-typescript": "^7.16.7",
     "@babel/runtime": "^7.17.9",
     "@faker-js/faker": "^7.1.0",
-    "@linaria/babel-preset": "^4.1.1",
-    "@linaria/core": "^4.1.0",
-    "@linaria/rollup": "^4.1.1",
+    "@linaria/babel-preset": "^4.5.4",
+    "@linaria/core": "^4.5.4",
+    "@linaria/react": "^4.5.4",
+    "@linaria/rollup": "^4.5.4",
     "@linaria/shaker": "^4.1.1",
     "@linaria/webpack5-loader": "^4.1.1",
     "@microsoft/api-extractor": "^7.23.0",

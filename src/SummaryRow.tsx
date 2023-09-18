@@ -24,34 +24,34 @@ interface SummaryRowProps<R, SR> extends SharedRowRendererProps<R, SR> {
 }
 
 const summaryRow = css`
-  &.${row} {
+  &.${String(row)} {
     line-height: var(--rdg-summary-row-height);
-    > .${cell} {
+    > .${`${cell}`} {
       position: sticky;
     }
   }
 `;
 
 const topSummaryRow = css`
-  &.${row} {
-    > .${cell} {
+  &.${`${row}`} {
+    > .${`${cell}`} {
       z-index: 1;
     }
 
-    > .${cellFrozen} {
+    > .${`${cellFrozen}`} {
       z-index: 2;
     }
   }
 `;
 
 const topSummaryRowBorderClassname = css`
-  & > .${cell} {
+  & > .${`${cell}`} {
     border-block-end: 2px solid var(--rdg-summary-border-color);
   }
 `;
 
 const bottomSummaryRowBorderClassname = css`
-  & > .${cell} {
+  & > .${`${cell}`} {
     border-block-start: 2px solid var(--rdg-summary-border-color);
   }
 `;

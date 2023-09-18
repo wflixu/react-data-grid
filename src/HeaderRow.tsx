@@ -31,14 +31,14 @@ const headerRow = css`
   background-color: var(--rdg-header-background-color);
   font-weight: bold;
 
-  & > .${cell} {
+  & > .${String(cell)} {
     /* Should have a higher value than 0 to show up above regular cells */
     z-index: 1;
     position: sticky;
     inset-block-start: 0;
   }
 
-  & > .${cellFrozen} {
+  & > .${String(cellFrozen)} {
     z-index: 2;
   }
 `;
