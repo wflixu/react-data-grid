@@ -34,7 +34,7 @@ jobs:
           message: 'Release v${{ steps.package-version.outputs.version }}'
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: npm ci
+      - run: npm npm install
       - run: npm run build
       - run: npm run build:types
       - run: npm publish
